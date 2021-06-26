@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { Button, Input, Image } from "react-native-elements";
+import { Button, Input, Text } from "react-native-elements";
 import { auth } from "../firebase";
 import { LogBox } from "react-native";
 
@@ -29,15 +29,9 @@ const LoginScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingView style={styles.container} behavior="height">
       <StatusBar style="light" />
-      <Image
-        source={{
-          uri: "https://blog.mozilla.org/internetcitizen/files/2018/08/signal-logo.png",
-        }}
-        style={{
-          width: 100,
-          height: 100,
-        }}
-      />
+      <Text h3 style={{ marginBottom: 20, color: "#2C6BED" }}>
+        Login to Yola
+      </Text>
       <View style={styles.inputContainer}>
         <Input
           placeholder="Email"

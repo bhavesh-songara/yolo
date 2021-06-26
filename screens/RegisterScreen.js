@@ -28,8 +28,8 @@ const RegisterScreen = ({ navigation }) => {
   return (
     <KeyboardAvoidingView behavior="padding " style={styles.container}>
       <StatusBar style="light" />
-      <Text h3 style={{ marginBottom: 20 }}>
-        Create a Signal Account
+      <Text h3 style={{ marginBottom: 20, color: "#2C6BED" }}>
+        Create a Yola Account
       </Text>
       <View style={styles.inputContainer}>
         <Input

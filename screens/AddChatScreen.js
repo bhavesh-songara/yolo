@@ -22,14 +22,14 @@ const AddChatScreen = ({ navigation }) => {
   };
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: "Add a new Chat",
+      title: "Create a Channel",
     });
   }, [navigation]);
 
   return (
     <View style={styles.container}>
       <Input
-        placeholder="Enter a chat name"
+        placeholder="Enter a Channel name"
         value={input}
         onChangeText={(text) => {
           setInput(text);
@@ -39,7 +39,11 @@ const AddChatScreen = ({ navigation }) => {
         }
         onSubmitEditing={createChat}
       />
-      <Button title="Create new Chat" onPress={createChat} />
+      <Button
+        title="Create new Channel"
+        onPress={createChat}
+        disabled={!input}
+      />
     </View>
   );
 };
